@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+
 
 namespace Persona
 {
@@ -7,43 +8,39 @@ namespace Persona
 
         private string surname;
         private string name;
-        private string patronymic;
+        private string fatherName;
         private int age;
-        private double weight;
-        private string colorEyes;
-        public Person(string surname, string name, string patronymic, int age, double weight, string colorEyes)
+        private string eyesColor;
+
+        public Person(string surname, string name, string fatherName, int age, string eyesColor)
         {
             this.surname = surname;
             this.name = name;
-            this.patronymic = patronymic;
-            this.colorEyes = colorEyes;
+            this.fatherName = fatherName;
             this.age = age;
-            this.weight = weight;
+            this.eyesColor = eyesColor;
+            
 
         }
 
-        public void runInWork()
+        public void goInSchool()
         {
-            Console.WriteLine("*Сломя голову несусь на работу*");
+            Console.WriteLine("I go to school");
         }
-        public void eatDonut()
+        public void eatBreakfast()
         {
-            Console.WriteLine("*С трудом идя на работу, кушаю пончик*");
+            Console.WriteLine("I eat breakfast");
         }
-        public void sleeping()
+        public override string ToString()
         {
-            Console.WriteLine("*Сплю...Zzzzz...*");
-        }
-        public void eatSoup()
-        {
-            Console.WriteLine("*Жадно ем на обеде суп!!*");
-        }
-        public void Print()
-        {
-            Console.WriteLine("Моя фамилия - " + surname + ", моё имя - " + name + ", моё отчество - " + patronymic + ",\nи мне всего лишь " + age + " лет , а вешу я всего ничего, " + weight
-                              + "киллограм ,\nглаза у меня красивые, " + colorEyes + " цвета.");
-
+            return ("My Surname:" + surname + 
+                "\nMy Name:" + name + 
+                "\nMy Father Name:" + fatherName + 
+                ",\nMy age" + age + "years old,"
+                + "\nMy eyes, " + eyesColor);
         }
     }
 }
+
+
 
